@@ -1,0 +1,19 @@
+react-admin-api:
+    host: http://localhost:8080
+    use-snake-case: true
+spring:
+    datasource:
+        driver-class-name: org.mariadb.jdbc.Driver
+        password: 123456a@
+        testWhileIdle: true
+        url: jdbc:mysql://localhost:3306/demo?useSSL=false
+        username: test
+        validationQuery: SELECT 1
+    jpa:
+        hibernate:
+            ddl-auto: create-drop
+            naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MariaDB103Dialect
+        show-sql: true
