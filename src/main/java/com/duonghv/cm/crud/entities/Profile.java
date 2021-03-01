@@ -29,18 +29,18 @@ public class Profile {
   private String agent;
 
   @Column(name="COMPUTER_NAME")
-  private String computerName;
+  private String name;
 
   @Column(name="DOMAIN")
   private String domain;
 
   @Column(name="IP_LAN")
-  private String iplan;
+  private String ipLAN;
 
   @Column(name="MAC_ADDRESS")
   private String macAddress;
 
-  @Column(name="IPINTRANET")
+  @Column(name="IP_INTRANET")
   private String ipIntranet;
 
   @Column(name="STATUS")
@@ -67,7 +67,7 @@ public class Profile {
   private Date firstPing;
 
   @Column(name="IP_DCN")
-  private String ipdcn;
+  private String ipDCN;
 
   @Column(name="HR")
   private String hr;

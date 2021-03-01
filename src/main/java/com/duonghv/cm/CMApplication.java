@@ -43,7 +43,8 @@ public class CMApplication {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:3000");
+        config.addAllowedOrigin("*");
+//        config.addAllowedOrigin("http://localhost:3000");
         config.addAllowedHeader("*");
         config.addExposedHeader("X-Total-Count");
         config.addExposedHeader("Content-Range");
@@ -60,10 +61,10 @@ public class CMApplication {
         SpringApplication.run(CMApplication.class, args);
     }
 
-    @EventListener(ApplicationReadyEvent.class)
-    public void afterReady() {
-        dataInitService.init();
-    }
+//    @EventListener(ApplicationReadyEvent.class)
+//    public void afterReady() {
+//        dataInitService.init();
+//    }
 
     @Bean
     public ViewResolver internalResourceViewResolver() {
